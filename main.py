@@ -47,7 +47,7 @@ if st.session_state['books']:
     st.plotly_chart(fig, use_container_width=True)
 
 # --- 추천 도서 (이미지 포함) ---
-st.subheader("🌟 추천 도서")
+st.subheader("🌟 이달의 추천 도서")
 
 # 추천 도서 정보 (제목 + 이미지 URL)
 recommended_books = [
