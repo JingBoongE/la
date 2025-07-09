@@ -52,10 +52,10 @@ st.subheader("🌟 이달의 추천 도서")
 # 추천 도서 정보 (제목 + 이미지 URL)
 recommended_books = [
     {"title": "마법천자문", "img": "https://i.namu.wiki/i/qsinpdBT8Ls2crMFWEDZzrIzEVyoMea7ZM7ZHK0hkNmdjgd_DZjTjpJNMM_rg7pGIMut8tM8wWCMN684LcEHPw.webp"},
-    {"title": "수학도둑", "img": "https://image.aladin.co.kr/product/27949/91/cover500/k712830826_1.jpg"},
-    {"title": "마틸다", "img": "https://image.aladin.co.kr/product/31562/21/cover500/8954670424_1.jpg"},
-    {"title": "시간을 파는 상점", "img": "https://image.aladin.co.kr/product/3562/97/cover500/8954609544_1.jpg"},
-    {"title": "완득이", "img": "https://image.aladin.co.kr/product/157/19/cover500/895460092X_1.jpg"}
+    {"title": "수학도둑", "img": "https://i.namu.wiki/i/urnbnsfp-itJqnkcKuKEFy7bXIuj7qr3eDegTnSAZcAbVgPpHRk117iqWv59l7KePWyK-QxqSWhmA3VvDhfkkg.webp"},
+    {"title": "마틸다", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTANC5U88sj6OpjQL4CKZabDOwzNctJXNCFqg&s"},
+    {"title": "시간을 파는 상점", "img": "https://image.yes24.com/Goods/6699994/XL"},
+    {"title": "완득이", "img": "https://image.yes24.com/goods/2849279/XL"}
 ]
 
 # 도서 수만큼 컬럼 생성
