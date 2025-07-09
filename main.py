@@ -70,12 +70,16 @@ book_images = {
     "완득이": "https://image.yes24.com/goods/2849279/XL"
 }
 
-cols = st.columns(len(df_top))
-for idx, row in df_top.iterrows():
-    with cols[idx]:
-        img_url = book_images.get(row['title'], None)
-        if img_url:
-            st.image(img_url, caption=f"{row['title']} (⭐{row['rating']:.1f})", use_container_width=True)
-        else:
-            st.write(f"{row['title']} (⭐{row['rating']:.1f})")
+# 조건 추가해서 안전하게 출력
+if not df_top.empty and len(df_top) > 0:
+    cols = st.columns(len(df_top))
+    for idx, row in df_top.iterrows():
+        with cols[idx]:
+            img_url = book_images.get(row['title'])
+            if img_url:
+                st.image(img_url, caption=f"{row['title']} (⭐{row['rating']:.1f})", use_container_width=True)
+            else:
+                st.write(f"{row['title']} (⭐{row['rating']:.1f})")
+else:
+    st.info("추천할 책 데이터가 아직 없어요! 책을 추가해보세요!")
 
