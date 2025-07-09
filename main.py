@@ -41,16 +41,7 @@ df_books = pd.read_sql_query('SELECT * FROM books', conn)
 
 if not df_books.empty:
     st.subheader("📖 내가 읽은 책 목록")
-
-for idx, row in df_books.iterrows():
-    cols = st.columns([4, 1])  # 넓이 비율 조절
-    with cols[0]:
-        st.write(f"{row['date']} - {row['title']} (⭐{row['rating']})")
-    with cols[1]:
-        if st.button("삭제", key=f"del_{row['id']}"):
-            c.execute('DELETE FROM books WHERE id=?', (row['id'],))
-            conn.commit()
-            st.experimental_rerun()  # 페이지 새로고침
+    st.dataframe(df_books[['date', 'title', 'rating', 'review']])
 
     # --- 시각화 ---
     st.subheader("📊 독서 활동 시각화")
@@ -91,4 +82,3 @@ if not df_top.empty and len(df_top) > 0:
                 st.write(f"{row['title']} (⭐{row['rating']:.1f})")
 else:
     st.info("추천할 책 데이터가 아직 없어요! 책을 추가해보세요!")
-
