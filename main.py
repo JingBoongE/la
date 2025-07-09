@@ -25,7 +25,7 @@ with st.form("book_form"):
             "제목": title,
             "별점": rating,
             "감상": review,
-            "날짜": datetime.today().strftime("%Y-%m-%d %H:%M:%S")
+            "날짜": datetime.today().strftime("%Y-%m-%d %H:%M:%S")  # 날짜+시간
         })
         st.success(f"'{title}'을(를) 저장했어요!")
 
@@ -46,13 +46,22 @@ if st.session_state['books']:
                  title="월별 읽은 책 수")
     st.plotly_chart(fig, use_container_width=True)
 
-# --- 추천 도서 ---
+# --- 추천 도서 (이미지 포함) ---
 st.subheader("🌟 추천 도서")
+
+# 추천 도서 정보 (제목 + 이미지 URL)
 recommended_books = [
-    "마법천자문",
-    "수학도둑",
-    "마틸다",
-    "시간을 파는 상점",
-    "완득이"
+    {"title": "마법천자문", "img": "https://image.aladin.co.kr/product/30223/5/cover500/k712837713_1.jpg"},
+    {"title": "수학도둑", "img": "https://image.aladin.co.kr/product/27949/91/cover500/k712830826_1.jpg"},
+    {"title": "마틸다", "img": "https://image.aladin.co.kr/product/31562/21/cover500/8954670424_1.jpg"},
+    {"title": "시간을 파는 상점", "img": "https://image.aladin.co.kr/product/3562/97/cover500/8954609544_1.jpg"},
+    {"title": "완득이", "img": "https://image.aladin.co.kr/product/157/19/cover500/895460092X_1.jpg"}
 ]
-st.write(", ".join(recommended_books))
+
+# 도서 수만큼 컬럼 생성
+cols = st.columns(len(recommended_books))
+
+# 각 도서를 컬럼에 이미지+제목으로 출력
+for idx, book in enumerate(recommended_books):
+    with cols[idx]:
+        st.image(book["img"], caption=book["title"], use_column_width=True)
