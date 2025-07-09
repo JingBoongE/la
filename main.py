@@ -51,7 +51,7 @@ st.subheader("🌟 추천 도서")
 
 # 추천 도서 정보 (제목 + 이미지 URL)
 recommended_books = [
-    {"title": "마법천자문", "img": "https://image.aladin.co.kr/product/30223/5/cover500/k712837713_1.jpg"},
+    {"title": "마법천자문", "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fnamu.wiki%2Fw%2F%25EB%25A7%2588%25EB%25B2%2595%25EC%25B2%259C%25EC%259E%2590%25EB%25AC%25B8&psig=AOvVaw0v4X7dsp5NFSC5lZAauB8f&ust=1752127990745000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCuycWPr44DFQAAAAAdAAAAABAE"},
     {"title": "수학도둑", "img": "https://image.aladin.co.kr/product/27949/91/cover500/k712830826_1.jpg"},
     {"title": "마틸다", "img": "https://image.aladin.co.kr/product/31562/21/cover500/8954670424_1.jpg"},
     {"title": "시간을 파는 상점", "img": "https://image.aladin.co.kr/product/3562/97/cover500/8954609544_1.jpg"},
