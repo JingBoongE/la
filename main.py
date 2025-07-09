@@ -94,6 +94,10 @@ book_images = {
     "완득이": "https://image.yes24.com/goods/2849279/XL"
 }
 
+# 제목별 평균 평점 계산 후 내림차순 정렬
+df_top = df_books.groupby('title')['rating'].mean().reset_index()
+df_top = df_top.sort_values(by='rating', ascending=False).head(5)
+
 # 조건 추가해서 안전하게 출력
 if not df_top.empty and len(df_top) > 0:
     cols = st.columns(len(df_top))
