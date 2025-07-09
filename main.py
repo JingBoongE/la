@@ -63,11 +63,11 @@ df_top = df_top.sort_values(by='rating', ascending=False).head(5)
 
 # 이미지 매핑 (예시)
 book_images = {
-    "마법천자문": "https://image.aladin.co.kr/product/30223/5/cover500/k712837713_1.jpg",
-    "수학도둑": "https://image.aladin.co.kr/product/27949/91/cover500/k712830826_1.jpg",
-    "마틸다": "https://image.aladin.co.kr/product/31562/21/cover500/8954670424_1.jpg",
-    "시간을 파는 상점": "https://image.aladin.co.kr/product/3562/97/cover500/8954609544_1.jpg",
-    "완득이": "https://image.aladin.co.kr/product/157/19/cover500/895460092X_1.jpg"
+    "마법천자문": "https://i.namu.wiki/i/qsinpdBT8Ls2crMFWEDZzrIzEVyoMea7ZM7ZHK0hkNmdjgd_DZjTjpJNMM_rg7pGIMut8tM8wWCMN684LcEHPw.webp",
+    "수학도둑": "https://i.namu.wiki/i/urnbnsfp-itJqnkcKuKEFy7bXIuj7qr3eDegTnSAZcAbVgPpHRk117iqWv59l7KePWyK-QxqSWhmA3VvDhfkkg.webp",
+    "마틸다": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTANC5U88sj6OpjQL4CKZabDOwzNctJXNCFqg&s",
+    "시간을 파는 상점": "img": "https://image.yes24.com/Goods/6699994/XL"
+    "완득이": "https://image.yes24.com/goods/2849279/XL"
 }
 
 cols = st.columns(len(df_top))
