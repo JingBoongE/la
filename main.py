@@ -64,4 +64,4 @@ cols = st.columns(len(recommended_books))
 # 각 도서를 컬럼에 이미지+제목으로 출력
 for idx, book in enumerate(recommended_books):
     with cols[idx]:
-        st.image(book["img"], caption=book["title"], use_column_width=True)
+        st.image(book["img"], caption=book["title"], use_container_width=True)
