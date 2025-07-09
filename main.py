@@ -66,7 +66,7 @@ book_images = {
     "마법천자문": "https://i.namu.wiki/i/qsinpdBT8Ls2crMFWEDZzrIzEVyoMea7ZM7ZHK0hkNmdjgd_DZjTjpJNMM_rg7pGIMut8tM8wWCMN684LcEHPw.webp",
     "수학도둑": "https://i.namu.wiki/i/urnbnsfp-itJqnkcKuKEFy7bXIuj7qr3eDegTnSAZcAbVgPpHRk117iqWv59l7KePWyK-QxqSWhmA3VvDhfkkg.webp",
     "마틸다": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTANC5U88sj6OpjQL4CKZabDOwzNctJXNCFqg&s",
-    "시간을 파는 상점": "img": "https://image.yes24.com/Goods/6699994/XL",
+    "시간을 파는 상점": "https://image.yes24.com/Goods/6699994/XL",
     "완득이": "https://image.yes24.com/goods/2849279/XL"
 }
 
