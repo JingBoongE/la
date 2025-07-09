@@ -98,12 +98,16 @@ book_images = {
 df_top = df_books.groupby('title')['rating'].mean().reset_index()
 df_top = df_top.sort_values(by='rating', ascending=False).head(5)
 
-# 조건 추가해서 안전하게 출력
-if not df_top.empty and len(df_top) > 0:
+# 제목별 평균 평점 계산 후 내림차순 정렬
+df_top = df_books.groupby('title')['rating'].mean().reset_index()
+df_top = df_top.sort_values(by='rating', ascending=False).head(5)
+
+# 추천 도서 출력
+if not df_top.empty:
     cols = st.columns(len(df_top))
     for idx, row in df_top.iterrows():
         with cols[idx]:
-            img_url = book_images.get(row['title'])
+            img_url = book_images.get(row['title'].lower())  # 소문자로 키 찾기
             if img_url:
                 st.image(img_url, caption=f"{row['title']} (⭐{row['rating']:.1f})", use_container_width=True)
             else:
