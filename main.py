@@ -65,7 +65,7 @@ if delete_id is not None:
 if not df_books.empty:
     st.dataframe(df_books[['date', 'title', 'rating', 'review']])
 else:
-    st.write("저장된 책이 없어요!")-
+    st.write("저장된 책이 없어요!")
 
     # --- 시각화 ---
     st.subheader("📊 독서 활동 시각화")
