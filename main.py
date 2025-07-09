@@ -41,7 +41,31 @@ df_books = pd.read_sql_query('SELECT * FROM books', conn)
 
 if not df_books.empty:
     st.subheader("📖 내가 읽은 책 목록")
+
+# 삭제할 책 id를 저장할 변수
+delete_id = None
+
+for idx, row in df_books.iterrows():
+    cols = st.columns([4, 1])
+    with cols[0]:
+        st.write(f"{row['date']} - {row['title']} (⭐{row['rating']})")
+    with cols[1]:
+        if st.button("삭제", key=f"del_{row['id']}"):
+            delete_id = row['id']
+
+# 삭제 실행
+if delete_id is not None:
+    c.execute('DELETE FROM books WHERE id=?', (delete_id,))
+    conn.commit()
+    # 삭제 후 다시 DB에서 데이터 불러오기
+    df_books = pd.read_sql_query('SELECT * FROM books', conn)
+    st.success("책이 삭제되었어요!")
+
+# 삭제 후 갱신된 데이터 출력 (없으면 위 출력으로 충분)
+if not df_books.empty:
     st.dataframe(df_books[['date', 'title', 'rating', 'review']])
+else:
+    st.write("저장된 책이 없어요!")-
 
     # --- 시각화 ---
     st.subheader("📊 독서 활동 시각화")
