@@ -25,7 +25,7 @@ with st.form("book_form"):
             "제목": title,
             "별점": rating,
             "감상": review,
-            "날짜": datetime.today().strftime("%Y-%m-%d")
+            "날짜": datetime.today().strftime("%Y-%m-%d %H:%M:%S")
         })
         st.success(f"'{title}'을(를) 저장했어요!")
 
