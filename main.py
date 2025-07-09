@@ -49,10 +49,10 @@ if st.session_state['books']:
 # --- 추천 도서 ---
 st.subheader("🌟 추천 도서")
 recommended_books = [
-    {"title": "마법천자문", "img": "https://image.aladin.co.kr/product/30223/5/cover500/k712837713_1.jpg"},
-    {"title": "수학도둑", "img": "https://image.aladin.co.kr/product/27949/91/cover500/k712830826_1.jpg"},
-    {"title": "마틸다", "img": "https://image.aladin.co.kr/product/31562/21/cover500/8954670424_1.jpg"},
-    {"title": "시간을 파는 상점", "img": "https://image.aladin.co.kr/product/3562/97/cover500/8954609544_1.jpg"},
-    {"title": "완득이", "img": "https://image.aladin.co.kr/product/157/19/cover500/895460092X_1.jpg"}
+    "마법천자문",
+    "수학도둑",
+    "마틸다",
+    "시간을 파는 상점",
+    "완득이"
 ]
 st.write(", ".join(recommended_books))
